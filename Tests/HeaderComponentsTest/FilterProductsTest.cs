@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using SauseLabPomProject.Pages.HeaderComponents;
 using System;
 using System.Collections.Generic;
@@ -11,6 +11,8 @@ namespace SauseLabPomProject.Tests.HeaderComponentsTest
     [TestFixture]
      public class FilterProductsTest:BaseClassTest
     {
+
+        
         [Test]
         public void FilterOnProductsTest()
         {

@@ -1,4 +1,4 @@
-﻿
+
 using SauseLabPomProject.Pages;
 using SauseLabPomProject.Pages.ProductPage;
 
@@ -7,7 +7,10 @@ namespace SauseLabPomProject.Tests.ProductPageTest
     
     public  class ProductIsAvailableTest:BaseClassTest
     {
-       
+/// <summary>
+/// Verifies that a product is available on the page after successful login.
+/// </summary>
+
         [Test]
         public void productIsAvailableTest()
         {

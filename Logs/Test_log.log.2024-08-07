@@ -1,0 +1,6 @@
+2024-08-07 14:27:47,236 [NonParallelWorker] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.ProductPageTest.ProductIsAvailableTest.productIsNotAvailableTest
+2024-08-07 14:27:47,262 [NonParallelWorker] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: NUnit.Framework.TestContext+ResultAdapter
+2024-08-07 14:28:13,938 [NonParallelWorker] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.ProductPageTest.ProductIsAvailableTest.productIsNotAvailableTest
+2024-08-07 14:28:13,956 [NonParallelWorker] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: NUnit.Framework.TestContext+ResultAdapter
+2024-08-07 14:29:39,336 [NonParallelWorker] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.ProductPageTest.ProductIsAvailableTest.productIsNotAvailableTest
+2024-08-07 14:29:39,352 [NonParallelWorker] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: NUnit.Framework.TestContext+ResultAdapter

@@ -1,0 +1,20 @@
+2024-08-14 20:20:40,089 [ParallelWorker#2] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.ProductPageTest.AddProductToCartTest.AddProductsToCartTest
+2024-08-14 20:20:40,355 [ParallelWorker#7] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.PaymentPageTest.CheckOutProductTest.CheckOutProductsTest
+2024-08-14 20:20:40,935 [ParallelWorker#5] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.HeaderComponentsTest.FilterProductsTest.FilterOnProductsTest
+2024-08-14 20:20:41,284 [ParallelWorker#6] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.PaymentPageTest.CancelOrderTest.cancelOrderTest
+2024-08-14 20:20:41,612 [ParallelWorker#3] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.HeaderComponentsTest.LogOutUserTest.userLogoutTest
+2024-08-14 20:20:42,128 [ParallelWorker#8] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.PaymentPageTest.OrderPlacedTest.orderPlacedTest
+2024-08-14 20:20:42,868 [ParallelWorker#4] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.ProductPageTest.ProductIsAvailableTest.productIsAvailableTest
+2024-08-14 20:20:42,885 [ParallelWorker#1] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.LoginPageTest.InValidLoginPage("LockedOutUser")
+2024-08-14 20:20:42,886 [ParallelWorker#1] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed:   The LogIn button is Available ,That means User is Unsuccessfull to Sign In 
+  Expected: False
+  But was:  True
+
+2024-08-14 20:20:59,122 [ParallelWorker#1] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.LoginPageTest.LoginPage_Test("StandardUser")
+2024-08-14 20:20:59,124 [ParallelWorker#1] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed:   Expected string length 8 but was 9. Strings differ at index 8.
+  Expected: "Swag Lab"
+  But was:  "Swag Labs"
+  -------------------^
+
+2024-08-14 20:20:59,656 [ParallelWorker#4] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.ProductPageTest.ProductIsAvailableTest.productIsNotAvailableTest
+2024-08-14 20:21:00,985 [ParallelWorker#2] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.ProductPageTest.AddProductToCartTest.RemoveFromCartTest
