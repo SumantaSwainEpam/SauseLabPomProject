@@ -1,0 +1,32 @@
+2025-08-31 12:26:35,624 [ParallelWorker#6] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.LoginPageTest.InValidLoginPage("LockedOutUser")
+2025-08-31 12:26:37,105 [ParallelWorker#1] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.ProductPageTest.ProductIsAvailableTest.productIsAvailableTest
+2025-08-31 12:26:38,727 [ParallelWorker#5] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.PaymentPageTest.OrderPlacedTest.orderPlacedTest
+2025-08-31 12:26:38,727 [ParallelWorker#5] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","selector":"#checkout"}
+  (Session info: chrome=139.0.7258.155); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2025-08-31 12:26:38,843 [ParallelWorker#4] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.ProductPageTest.AddProductToCartTest.AddProductsToCartTest
+2025-08-31 12:26:38,843 [ParallelWorker#4] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed:   Cart count did not match expected value.
+  Expected string length 1 but was 0. Strings differ at index 0.
+  Expected: "2"
+  But was:  <string.Empty>
+  -----------^
+
+2025-08-31 12:26:39,193 [ParallelWorker#2] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.PaymentPageTest.CancelOrderTest.cancelOrderTest
+2025-08-31 12:26:39,193 [ParallelWorker#2] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","selector":"#checkout"}
+  (Session info: chrome=139.0.7258.155); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2025-08-31 12:26:39,196 [ParallelWorker#7] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.PaymentPageTest.CheckOutProductTest.CheckOutProductsTest
+2025-08-31 12:26:39,196 [ParallelWorker#7] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","selector":"#checkout"}
+  (Session info: chrome=139.0.7258.155); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2025-08-31 12:26:39,636 [ParallelWorker#3] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.HeaderComponentsTest.FilterProductsTest.FilterOnProductsTest
+2025-08-31 12:26:49,164 [ParallelWorker#8] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.HeaderComponentsTest.LogOutUserTest.userLogoutTest
+2025-08-31 12:26:49,164 [ParallelWorker#8] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds
+  ----> OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","selector":"#checkout"}
+  (Session info: chrome=139.0.7258.155); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+2025-08-31 12:26:49,889 [ParallelWorker#4] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed: SauseLabPomProject.Tests.ProductPageTest.AddProductToCartTest.RemoveFromCartTest
+2025-08-31 12:26:49,890 [ParallelWorker#4] ERROR SauseLabPomProject.Tests.BaseClassTest - Test Failed:   Product count in cart should be 2 after adding products.
+  Expected string length 1 but was 0. Strings differ at index 0.
+  Expected: "2"
+  But was:  <string.Empty>
+  -----------^
+
+2025-08-31 12:26:51,315 [ParallelWorker#1] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.ProductPageTest.ProductIsAvailableTest.productIsNotAvailableTest
+2025-08-31 12:26:55,771 [ParallelWorker#6] INFO  SauseLabPomProject.Tests.BaseClassTest - Test Passed: SauseLabPomProject.Tests.LoginPageTest.LoginPage_Test("StandardUser")

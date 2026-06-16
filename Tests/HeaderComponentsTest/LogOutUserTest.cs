@@ -1,28 +1,17 @@
-﻿using SauseLabPomProject.Pages.HeaderComponents;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SauseLabPomProject.Pages.HeaderComponents;
 
 namespace SauseLabPomProject.Tests.HeaderComponentsTest
 {
-     public  class LogOutUserTest:BaseClassTest
+    public class LogOutUserTest : BaseClassTest
     {
         [Test]
-
-        public void userLogoutTest()
+        public async Task UserLogoutTest()
         {
-
-
-            Login("StandardUser");
-            var _logoutUser = GetPage<LogOutUser>();
-            _logoutUser.LogOutCondition();
-            var error = _logoutUser.GetErrorButtonWithWait();
+            await Login("StandardUser");
+            var logoutUser = GetPage<LogOutUser>();
+            await logoutUser.LogOutCondition();
+            var error = await logoutUser.GetErrorButtonWithWait();
             Assert.That(error.Text, Is.EqualTo("Epic sadface: You can only access '/checkout-step-one.html' when you are logged in."));
-            
-
-
         }
     }
 }

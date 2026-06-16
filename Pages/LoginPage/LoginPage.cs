@@ -1,46 +1,33 @@
-﻿using OpenQA.Selenium;
-using SauseLabPomProject;
+using OpenQA.Selenium;
 using SauseLabPomProject.Drivers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SauseLabPomProject.Pages
 {
     public class LoginPage : BaseClass
     {
-       
         public LoginPage(IWebDriver driver) : base(WebFactory.driver.Value) { }
-       
 
-        private IWebElement userName => WebFactory.driver.Value.FindElement(By.Id("user-name"));
-        private IWebElement passWord => WebFactory.driver.Value.FindElement(By.Id("password"));
-        private IWebElement logIn => WebFactory.driver.Value.FindElement(By.Id("login-button"));
-        private IWebElement appLogo => WebFactory.driver.Value.FindElement(By.CssSelector(".app_logo"));
-        private IWebElement loginButtoon => WebFactory.driver.Value.FindElement(By.Id("login-button"));
+        private IWebElement UserNameField => WebFactory.driver.Value.FindElement(By.Id("user-name"));
+        private IWebElement PasswordField => WebFactory.driver.Value.FindElement(By.Id("password"));
+        private IWebElement LoginButton => WebFactory.driver.Value.FindElement(By.Id("login-button"));
+        private IWebElement AppLogo => WebFactory.driver.Value.FindElement(By.CssSelector(".app_logo"));
 
-
-        internal void UserLogin(string Username, string Password)
-        {   
-           
-            userName.SendKeys(Username);
-            passWord.SendKeys(Password);
-            logIn.Click();
-
-        }
-
-        public string GetAppLogoText()
+        public async Task UserLogin(string username, string password)
         {
-            return appLogo.Text;
+            UserNameField.SendKeys(username);
+            PasswordField.SendKeys(password);
+            LoginButton.Click();
+            await Task.CompletedTask;
         }
 
-        public bool isLoginButtonDisplayed()
+        public Task<string> GetAppLogoText()
         {
-            return loginButtoon.Displayed;
+            return Task.FromResult(AppLogo.Text);
         }
 
-        
+        public Task<bool> IsLoginButtonDisplayed()
+        {
+            return Task.FromResult(LoginButton.Displayed);
+        }
     }
 }

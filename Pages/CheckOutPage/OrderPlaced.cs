@@ -1,71 +1,61 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using SauseLabPomProject.Drivers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Channels;
-using System.Threading.Tasks;
-using SauseLabPomProject.Drivers;
-
 
 namespace SauseLabPomProject.Pages.PaymentPage
 {
-     public class OrderPlaced:BaseClass
+    public class OrderPlaced : BaseClass
     {
         public OrderPlaced(IWebDriver driver) : base(WebFactory.driver.Value) { }
-        
 
-        private IWebElement bagPack => WebFactory.driver.Value.FindElement(By.Id("add-to-cart-sauce-labs-backpack"));
-        private IWebElement light => WebFactory.driver.Value.FindElement(By.Id("add-to-cart-sauce-labs-bike-light"));
-        private IWebElement navigateToCart => WebFactory.driver.Value.FindElement(By.Id("shopping_cart_container"));
-        private IWebElement firstName => WebFactory.driver.Value.FindElement(By.Id("first-name"));
-        private IWebElement lastName => WebFactory.driver.Value.FindElement(By.Id("last-name"));
-        private IWebElement zipCode => WebFactory.driver.Value.FindElement(By.Id("postal-code"));
-        private IWebElement contOrder => WebFactory.driver.Value.FindElement(By.Id("continue"));
-        private IWebElement finish => WebFactory.driver.Value.FindElement(By.Id("finish"));
-        private IWebElement productPageElement => WebFactory.driver.Value.FindElement(By.CssSelector(".complete-header"));
-        private IWebElement checkOut => WebFactory.driver.Value.FindElement(By.Id("checkout"));
+        private IWebElement BagPack => WebFactory.driver.Value.FindElement(By.Id("add-to-cart-sauce-labs-backpack"));
+        private IWebElement BikeLight => WebFactory.driver.Value.FindElement(By.Id("add-to-cart-sauce-labs-bike-light"));
+        private IWebElement CartContainer => WebFactory.driver.Value.FindElement(By.Id("shopping_cart_container"));
+        private IWebElement FirstName => WebFactory.driver.Value.FindElement(By.Id("first-name"));
+        private IWebElement LastName => WebFactory.driver.Value.FindElement(By.Id("last-name"));
+        private IWebElement ZipCode => WebFactory.driver.Value.FindElement(By.Id("postal-code"));
+        private IWebElement ContinueOrder => WebFactory.driver.Value.FindElement(By.Id("continue"));
+        private IWebElement FinishButton => WebFactory.driver.Value.FindElement(By.Id("finish"));
+        private IWebElement OrderCompleteHeader => WebFactory.driver.Value.FindElement(By.CssSelector(".complete-header"));
+        private IWebElement CheckOut => WebFactory.driver.Value.FindElement(By.Id("checkout"));
 
-       
-        public void AddProductsToCart()
+        public async Task AddProductsToCart()
         {
-            bagPack.Click();
-            light.Click();
+            BagPack.Click();
+            BikeLight.Click();
+            await Task.CompletedTask;
         }
 
-        public void NavigateToCart()
+        public async Task NavigateToCart()
         {
-            navigateToCart.Click();
+            CartContainer.Click();
+            await Task.CompletedTask;
         }
 
-        public void ProceedToCheckout()
+        public async Task ProceedToCheckout()
         {
-            checkOut.Click(); 
+            CheckOut.Click();
+            await Task.CompletedTask;
         }
 
-        
-        public void EnterCheckoutInformation(string firstNameValue, string lastNameValue, string zipCodeValue)
+        public async Task EnterCheckoutInformation(string firstName, string lastName, string zipCode)
         {
-            firstName.SendKeys(firstNameValue); 
-            lastName.SendKeys(lastNameValue); 
-            zipCode.SendKeys(zipCodeValue); 
-            contOrder.Click(); 
+            FirstName.SendKeys(firstName);
+            LastName.SendKeys(lastName);
+            ZipCode.SendKeys(zipCode);
+            ContinueOrder.Click();
+            await Task.CompletedTask;
         }
 
-       
-        public void PlaceOrder()
+        public async Task PlaceOrder()
         {
-            ProceedToCheckout(); 
-            EnterCheckoutInformation("Sumanta", "Swain", "500081"); 
-            finish.Click(); 
+            await ProceedToCheckout();
+            await EnterCheckoutInformation("Sumanta", "Swain", "500081");
+            FinishButton.Click();
         }
 
-       
-        public string GetProductPageTitle()
+        public Task<string> GetProductPageTitle()
         {
-            return productPageElement.Text; 
+            return Task.FromResult(OrderCompleteHeader.Text);
         }
-
     }
 }

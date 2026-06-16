@@ -1,48 +1,35 @@
-﻿using OpenQA.Selenium;
-using SauseLabPomProject;
+using OpenQA.Selenium;
 using SauseLabPomProject.Drivers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SauseLabPomProject.Pages.ProductPage
 {
-     public class ProductIsAvailable:BaseClass
+    public class ProductIsAvailable : BaseClass
     {
-       
+        public ProductIsAvailable(IWebDriver driver) : base(WebFactory.driver.Value) { }
 
-        public  ProductIsAvailable(IWebDriver driver) : base(WebFactory.driver.Value) { }
-        
+        private By ElementPresent => By.Id("item_4_title_link");
+        private By ElementIsNotPresent => By.Id("item_8_title_link");
 
-        private By elementPresent => By.Id("item_4_title_link");
-        private By elementIsNotPresent => By.Id("item_8_title_link");
-
-
-        private bool IsElementPresent(By locator)
+        private Task<bool> IsElementPresent(By locator)
         {
             try
             {
-                return WebFactory.driver.Value.FindElement(locator).Displayed;
-
+                return Task.FromResult(WebFactory.driver.Value.FindElement(locator).Displayed);
             }
             catch (Exception)
             {
-                return false;
+                return Task.FromResult(false);
             }
         }
 
-        public bool checkProductAvl()
-        { 
-            
-            return IsElementPresent(elementPresent); 
-            
-        }
-        public bool checkProductNotAvl()
+        public async Task<bool> CheckProductAvailable()
         {
-            return !IsElementPresent(elementIsNotPresent);
+            return await IsElementPresent(ElementPresent);
         }
-        
+
+        public async Task<bool> CheckProductNotAvailable()
+        {
+            return !await IsElementPresent(ElementIsNotPresent);
+        }
     }
 }

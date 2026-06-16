@@ -1,47 +1,34 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SauseLabPomProject.Drivers;
 
 namespace SauseLabPomProject.Pages.HeaderComponents
 {
-     public  class FilterProducts:BaseClass
+    public class FilterProducts : BaseClass
     {
-
-
         public FilterProducts(IWebDriver driver) : base(WebFactory.driver.Value) { }
 
-        private IWebElement filter => WebFactory.driver.Value.FindElement(By.CssSelector("[class=product_sort_container]"));
-        private IWebElement product1 => WebFactory.driver.Value.FindElement(By.Id("item_3_title_link"));
-        private IWebElement product2 => WebFactory.driver.Value.FindElement(By.Id("item_2_title_link"));
+        private IWebElement Filter => WebFactory.driver.Value.FindElement(By.CssSelector("[class=product_sort_container]"));
+        private IWebElement Product1 => WebFactory.driver.Value.FindElement(By.Id("item_3_title_link"));
+        private IWebElement Product2 => WebFactory.driver.Value.FindElement(By.Id("item_2_title_link"));
 
-        
-        public void ApplyFilter()
+        public async Task ApplyFilter()
         {
-            filter.Click();
-            SelectElement selectElement = new SelectElement(filter);
+            Filter.Click();
+            SelectElement selectElement = new SelectElement(Filter);
             selectElement.SelectByIndex(1);
-            filter.Click();
-
-
+            Filter.Click();
+            await Task.CompletedTask;
         }
 
-        public IWebElement GetProduct1()
+        public Task<IWebElement> GetProduct1()
         {
-            return product1;
+            return Task.FromResult(Product1);
         }
-        public IWebElement GetProduct2()
+
+        public Task<IWebElement> GetProduct2()
         {
-            return product2;
+            return Task.FromResult(Product2);
         }
-
-
-
-
-
     }
 }
