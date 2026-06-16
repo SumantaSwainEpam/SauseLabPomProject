@@ -95,7 +95,8 @@ namespace SauseLabPomProject.Tests
                 _log.Info($"Test Passed: {TestContext.CurrentContext.Test.FullName}");
             }
 
-            WebFactory.driver.Value?.Close();
+            WebFactory.driver.Value?.Quit();
+            WebFactory.driver.Value = null;
             await Task.CompletedTask;
         }
 

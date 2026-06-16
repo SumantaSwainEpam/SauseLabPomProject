@@ -4,6 +4,9 @@ namespace SauseLabPomProject.Tests.ProductPageTest
 {
     public class ProductIsAvailableTest : BaseClassTest
     {
+/// <summary>
+/// [API Error: NotFound]
+/// </summary>
         [Test]
         public async Task ShouldShowAvailableProduct()
         {

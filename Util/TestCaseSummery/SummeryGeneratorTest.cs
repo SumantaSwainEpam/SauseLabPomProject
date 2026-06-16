@@ -17,7 +17,7 @@ namespace SauseLabPomProject.Util.TestCaseSummery
             }
 
             string filePath = Path.Combine(projectRoot, "Tests", "ProductPageTest", "ProductIsAvailableTest.cs");
-            string methodName = "productIsAvailableTest";
+            string methodName = "ShouldShowAvailableProduct";
 
             Assert.IsTrue(File.Exists(filePath), $"File not found: {filePath}");
 
